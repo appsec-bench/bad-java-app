@@ -20,6 +20,10 @@ jobs:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
     container:
       image: semgrep/semgrep
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
       
     steps:
     - uses: actions/checkout@v4
