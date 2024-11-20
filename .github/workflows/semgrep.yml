@@ -32,7 +32,8 @@ jobs:
             path: maven_dep_tree.txt
             
   semgrep:
-    name: semgrep/ci
+    name: Scan
+    needs: buildmavenDepTree
     runs-on: ubuntu-20.04
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
