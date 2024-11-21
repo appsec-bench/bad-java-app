@@ -14,6 +14,8 @@ name: Semgrep
 jobs:
   buildmavenDepTree:
         runs-on: ubuntu-latest
+        container:
+          image: semgrep/semgrep
         steps:
         - uses: actions/checkout@v4
         - name: Set up JDK 17
